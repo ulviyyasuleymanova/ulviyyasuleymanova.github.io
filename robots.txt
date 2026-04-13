@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ulviyyasuleymanova.github.io/sitemap.xml
