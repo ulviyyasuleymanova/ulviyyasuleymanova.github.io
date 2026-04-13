@@ -3,12 +3,496 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>Ülviyyə Süleymanova – Osteopat həkim, Bakı</title>
-  <meta name="description" content="Ülviyyə Süleymanova Bakıda fəaliyyət göstərən osteopat həkimdir. Osteopatiya, manual terapiya və konsultasiya xidmətləri." />
+  <meta name="description" content="Ülviyyə Süleymanova Bakıda fəaliyyət göstərən osteopat həkimdir. Osteopatiya, manual terapiya, bel və boyun ağrıları, duruş problemləri və konsultasiya xidmətləri." />
+  <meta name="keywords" content="Ülviyyə Süleymanova, osteopat Bakı, osteopatiya Bakı, manual terapiya Bakı, bel ağrısı, boyun ağrısı, osteopat həkim" />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="Ülviyyə Süleymanova" />
+
+  <meta property="og:title" content="Ülviyyə Süleymanova – Osteopat həkim, Bakı" />
+  <meta property="og:description" content="Bakıda osteopatiya və manual terapiya xidməti. Bel, boyun və duruş problemləri üzrə konsultasiya." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://ulviyyasuleymanova.github.io/" />
+  <meta property="og:locale" content="az_AZ" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Ülviyyə Süleymanova – Osteopat həkim, Bakı" />
+  <meta name="twitter:description" content="Bakıda osteopatiya və manual terapiya xidməti." />
+
+  <link rel="canonical" href="https://ulviyyasuleymanova.github.io/" />
+
+  <style>
+    :root {
+      --bg: #f7f7f5;
+      --card: #ffffff;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --accent: #1f6f78;
+      --accent2: #2f855a;
+      --border: #e5e7eb;
+      --shadow: 0 10px 30px rgba(0,0,0,0.06);
+      --radius: 18px;
+      --max: 1024px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      color: var(--text);
+      background: linear-gradient(180deg, #f8fafc 0%, var(--bg) 100%);
+      line-height: 1.65;
+    }
+
+    .container {
+      width: min(92%, var(--max));
+      margin: 0 auto;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      backdrop-filter: blur(10px);
+      background: rgba(255,255,255,0.8);
+      border-bottom: 1px solid rgba(229,231,235,0.8);
+      z-index: 20;
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 14px 0;
+    }
+
+    .brand {
+      font-weight: 700;
+      font-size: 18px;
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--text);
+      font-size: 14px;
+    }
+
+    .hero {
+      padding: 56px 0 28px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 24px;
+      align-items: stretch;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .hero-main {
+      padding: 38px;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: #eaf6f7;
+      color: var(--accent);
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      font-size: clamp(32px, 4vw, 52px);
+      line-height: 1.1;
+      margin: 0 0 14px;
+    }
+
+    .subtitle {
+      font-size: 18px;
+      color: var(--muted);
+      margin-bottom: 22px;
+      max-width: 720px;
+    }
+
+    .cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 24px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 18px;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.2s ease;
+      border: 1px solid transparent;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: white;
+    }
+
+    .btn-primary:hover { transform: translateY(-1px); }
+
+    .btn-secondary {
+      background: white;
+      color: var(--text);
+      border-color: var(--border);
+    }
+
+    .hero-side {
+      padding: 28px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .info-item {
+      margin-bottom: 18px;
+    }
+
+    .info-label {
+      display: block;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--muted);
+      margin-bottom: 4px;
+    }
+
+    .info-value {
+      font-size: 17px;
+      font-weight: 600;
+    }
+
+    section {
+      padding: 22px 0;
+    }
+
+    .section-title {
+      font-size: 30px;
+      margin: 0 0 16px;
+    }
+
+    .section-text {
+      color: var(--muted);
+      margin: 0 0 24px;
+      max-width: 800px;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .service-card {
+      padding: 24px;
+    }
+
+    .service-card h3 {
+      margin-top: 0;
+      margin-bottom: 12px;
+      font-size: 20px;
+    }
+
+    .service-card p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .about {
+      padding: 28px;
+    }
+
+    .about p {
+      margin-top: 0;
+      color: var(--text);
+    }
+
+    .faq {
+      display: grid;
+      gap: 14px;
+    }
+
+    details {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 16px 18px;
+      box-shadow: var(--shadow);
+    }
+
+    summary {
+      cursor: pointer;
+      font-weight: 600;
+    }
+
+    details p {
+      color: var(--muted);
+      margin: 12px 0 0;
+    }
+
+    .contact {
+      padding: 28px;
+    }
+
+    .contact-list {
+      display: grid;
+      gap: 12px;
+      margin-top: 12px;
+    }
+
+    .contact a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    footer {
+      padding: 32px 0 48px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    @media (max-width: 860px) {
+      .hero-grid,
+      .grid-3 {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding-top: 28px;
+      }
+
+      .hero-main,
+      .hero-side,
+      .about,
+      .contact {
+        padding: 24px;
+      }
+
+      .nav {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Physician",
+    "name": "Ülviyyə Süleymanova",
+    "jobTitle": "Osteopat həkim",
+    "medicalSpecialty": "Osteopathy",
+    "description": "Ülviyyə Süleymanova Bakıda fəaliyyət göstərən osteopat həkimdir. Osteopatiya, manual terapiya, bel və boyun ağrıları, duruş problemləri və konsultasiya xidmətləri göstərir.",
+    "url": "https://ulviyyasuleymanova.github.io/",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Bakı",
+      "addressCountry": "AZ"
+    },
+    "areaServed": "Bakı",
+    "sameAs": [
+      "https://www.instagram.com/osteopat_baku/"
+    ]
+  }
+  </script>
 </head>
 <body>
-  <h1>Ülviyyə Süleymanova</h1>
-  <p>Osteopat həkim, Bakı</p>
-  <p>Bu sayt hazırlanır.</p>
+  <header>
+    <div class="container nav">
+      <a class="brand" href="#top">Ülviyyə Süleymanova</a>
+      <nav class="nav-links">
+        <a href="#about">Haqqında</a>
+        <a href="#services">Xidmətlər</a>
+        <a href="#faq">Suallar</a>
+        <a href="#contact">Əlaqə</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="card hero-main">
+          <div class="badge">Osteopat həkim • Bakı</div>
+          <h1>Ülviyyə Süleymanova</h1>
+          <p class="subtitle">
+            Bakıda fəaliyyət göstərən osteopat həkim. Osteopatiya, manual terapiya,
+            bel və boyun ağrıları, duruş problemləri və hərəkət sistemi ilə bağlı
+            şikayətlər üzrə konsultasiya və yanaşmalar.
+          </p>
+
+          <div class="cta-row">
+            <a class="btn btn-primary" href="https://www.instagram.com/osteopat_baku/" target="_blank" rel="noopener noreferrer">Instagram səhifəsinə keç</a>
+            <a class="btn btn-secondary" href="#contact">Əlaqə məlumatları</a>
+          </div>
+        </div>
+
+        <aside class="card hero-side">
+          <div class="info-item">
+            <span class="info-label">İxtisas</span>
+            <div class="info-value">Osteopatiya / Manual terapiya</div>
+          </div>
+
+          <div class="info-item">
+            <span class="info-label">Şəhər</span>
+            <div class="info-value">Bakı, Azərbaycan</div>
+          </div>
+
+          <div class="info-item">
+            <span class="info-label">Sosial şəbəkə</span>
+            <div class="info-value">@osteopat_baku</div>
+          </div>
+
+          <div class="info-item">
+            <span class="info-label">Qəbul</span>
+            <div class="info-value">Əvvəlcədən yazılmaqla</div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container">
+        <div class="card about">
+          <h2 class="section-title">Osteopat həkim haqqında</h2>
+          <p>
+            Ülviyyə Süleymanova Bakıda fəaliyyət göstərən osteopat həkimdir.
+            O, osteopatiya və manual terapiya yanaşmaları ilə hərəkət sistemi,
+            bel və boyun nahiyəsində gərginlik, duruş problemləri və digər
+            funksional narahatlıqlar üzrə pasiyentlərlə işləyir.
+          </p>
+          <p>
+            Məqsəd pasiyentin ümumi vəziyyətini qiymətləndirmək, şikayətlərin
+            səbəblərini daha sistemli şəkildə anlamaq və uyğun yanaşma barədə
+            məlumat verməkdir.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="container">
+        <h2 class="section-title">Xidmət istiqamətləri</h2>
+        <p class="section-text">
+          Aşağıdakı istiqamətlər üzrə konsultasiya və yanaşmalar təqdim oluna bilər.
+        </p>
+
+        <div class="grid-3">
+          <div class="card service-card">
+            <h3>Bel ağrıları</h3>
+            <p>
+              Bel nahiyəsində gərginlik, hərəkət məhdudluğu və gündəlik həyat keyfiyyətinə
+              təsir edən narahatlıqlar üzrə qiymətləndirmə və yanaşma.
+            </p>
+          </div>
+
+          <div class="card service-card">
+            <h3>Boyun və kürək problemləri</h3>
+            <p>
+              Boyun ağrısı, oturaq həyat tərzi ilə bağlı gərginlik və kürək nahiyəsində
+              yaranan narahatlıqlarla bağlı osteopatik yanaşma.
+            </p>
+          </div>
+
+          <div class="card service-card">
+            <h3>Duruş və hərəkət sistemi</h3>
+            <p>
+              Duruş problemləri, bədənin biomekanik balansı və hərəkət rahatlığının
+              yaxşılaşdırılmasına yönəlmiş yanaşmalar.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq">
+      <div class="container">
+        <h2 class="section-title">Tez-tez verilən suallar</h2>
+        <div class="faq">
+          <details>
+            <summary>Osteopat kimdir?</summary>
+            <p>
+              Osteopat bədənin hərəkət sistemi, əzələ-sümük balansı və funksional
+              narahatlıqlarına kompleks yanaşan mütəxəssisdir.
+            </p>
+          </details>
+
+          <details>
+            <summary>Bakıda osteopat həkim varmı?</summary>
+            <p>
+              Bəli. Ülviyyə Süleymanova Bakıda fəaliyyət göstərən osteopat həkimdir
+              və osteopatiya ilə bağlı konsultasiya təqdim edir.
+            </p>
+          </details>
+
+          <details>
+            <summary>Osteopatiya hansı hallarda faydalı ola bilər?</summary>
+            <p>
+              Bel və boyun gərginliyi, duruş problemləri, hərəkət məhdudluğu və
+              bəzi funksional narahatlıqlarda qiymətləndirmə və dəstək üçün müraciət edilə bilər.
+            </p>
+          </details>
+
+          <details>
+            <summary>Qəbul üçün necə əlaqə saxlamaq olar?</summary>
+            <p>
+              Ən rahat yol Instagram səhifəsi üzərindən yazmaqdır:
+              <a href="https://www.instagram.com/osteopat_baku/" target="_blank" rel="noopener noreferrer">@osteopat_baku</a>
+            </p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <div class="card contact">
+          <h2 class="section-title">Əlaqə</h2>
+          <p class="section-text">
+            Qəbul və əlavə məlumat üçün sosial şəbəkə üzərindən əlaqə saxlaya bilərsiniz.
+          </p>
+
+          <div class="contact-list">
+            <div><strong>Ad:</strong> Ülviyyə Süleymanova</div>
+            <div><strong>İxtisas:</strong> Osteopat həkim</div>
+            <div><strong>Şəhər:</strong> Bakı, Azərbaycan</div>
+            <div><strong>Instagram:</strong> <a href="https://www.instagram.com/osteopat_baku/" target="_blank" rel="noopener noreferrer">instagram.com/osteopat_baku</a></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      © 2026 Ülviyyə Süleymanova. Bütün hüquqlar qorunur.
+    </div>
+  </footer>
 </body>
 </html>
