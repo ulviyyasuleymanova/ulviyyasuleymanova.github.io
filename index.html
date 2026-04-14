@@ -5,20 +5,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>Osteopat Bakı – Ülviyyə Süleymanova | Disk Yırtığı, Miqren</title>
-  <meta name="description" content="Bakıda osteopat həkim. Bel ağrısı, boyun ağrısı, disk yırtığı, miqren, skolioz müalicəsi. 15+ il təcrübə. Medipark Klinikası. WhatsApp: +994557033812">
+  <meta name="description" content="Bakıda osteopat həkim. Bel ağrısı, boyun ağrısı, disk yırtığı, miqren, skolioz müalicəsi. Uşaqlarda osteopatiya. 15+ il təcrübə. Medipark Klinikası. WhatsApp: +994557033812">
   <meta name="robots" content="index, follow" />
   <meta name="author" content="Ülviyyə Süleymanova" />
   <meta property="og:title" content="Osteopat Bakı – Ülviyyə Süleymanova">
-  <meta property="og:description" content="Bel, boyun, disk yırtığı, miqren müalicəsi. 15+ il təcrübə.">
+  <meta property="og:description" content="Bel, boyun, disk yırtığı, miqren, uşaqlarda osteopatiya. 15+ il təcrübə.">
   <meta property="og:url" content="https://www.osteopatbaku.az">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="az_AZ" />
-
-  
+  <meta property="og:image" content="https://www.osteopatbaku.az/doctor.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
 
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Ülviyyə Süleymanova – Terapevt və Osteopat, Bakı" />
   <meta name="twitter:description" content="15+ il təcrübə ilə osteopatiya və terapevtik yanaşmalar." />
+  <meta name="twitter:image" content="https://www.osteopatbaku.az/doctor.jpg" />
 
   <link rel="canonical" href="https://www.osteopatbaku.az/" />
 
@@ -186,32 +188,48 @@
       border-color: var(--border);
     }
 
+    /* Doctor photo card */
     .hero-side {
-      padding: 28px;
       display: flex;
       flex-direction: column;
-      justify-content: center;
-      gap: 16px;
+      gap: 0;
+      overflow: hidden;
+    }
+
+    .doctor-photo {
+      width: 100%;
+      aspect-ratio: 3/4;
+      object-fit: cover;
+      object-position: top center;
+      display: block;
+      border-radius: var(--radius) var(--radius) 0 0;
+    }
+
+    .hero-stats {
+      padding: 20px 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
     }
 
     .stat {
-      padding: 16px 18px;
-      border-radius: 16px;
+      padding: 14px 16px;
+      border-radius: 14px;
       background: #f8fafc;
       border: 1px solid var(--border);
     }
 
     .stat-label {
       display: block;
-      font-size: 13px;
+      font-size: 12px;
       text-transform: uppercase;
       letter-spacing: 0.06em;
       color: var(--muted);
-      margin-bottom: 4px;
+      margin-bottom: 3px;
     }
 
     .stat-value {
-      font-size: 18px;
+      font-size: 16px;
       font-weight: 700;
     }
 
@@ -256,6 +274,13 @@
       color: var(--muted);
     }
 
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 22px;
+      align-items: start;
+    }
+
     .about-card,
     .cta-card,
     .contact-card {
@@ -281,6 +306,71 @@
 
     .muted {
       color: var(--muted);
+    }
+
+    /* Children osteopathy section */
+    .children-card {
+      padding: 32px;
+      background: linear-gradient(135deg, #f0faf8 0%, #e7f5f6 100%);
+      border-color: #b2dfe3;
+    }
+
+    .children-card .section-title {
+      color: var(--accent-dark);
+    }
+
+    .children-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin-top: 18px;
+    }
+
+    .children-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      padding: 10px 12px;
+      background: white;
+      border-radius: 12px;
+      border: 1px solid #c8e8eb;
+      font-size: 14px;
+      color: var(--text);
+    }
+
+    .children-item::before {
+      content: "◆";
+      color: var(--accent);
+      font-size: 10px;
+      margin-top: 3px;
+      flex-shrink: 0;
+    }
+
+    /* Diseases list */
+    .diseases-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      margin-top: 8px;
+    }
+
+    .disease-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      padding: 12px 14px;
+      background: var(--card);
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      font-size: 14px;
+      color: var(--text);
+    }
+
+    .disease-item::before {
+      content: "✓";
+      color: var(--accent);
+      font-weight: 700;
+      flex-shrink: 0;
     }
 
     .cta-card {
@@ -358,21 +448,33 @@
     @media (max-width: 900px) {
       .hero-grid,
       .grid-3,
-      .grid-2 {
+      .grid-2,
+      .about-grid,
+      .children-grid,
+      .diseases-grid {
         grid-template-columns: 1fr;
       }
 
       .hero-main,
-      .hero-side,
       .about-card,
       .cta-card,
-      .contact-card {
+      .contact-card,
+      .children-card {
         padding: 24px;
       }
 
       .nav {
         flex-direction: column;
         align-items: flex-start;
+      }
+
+      .doctor-photo {
+        aspect-ratio: 4/3;
+        border-radius: var(--radius);
+      }
+
+      .hero-stats {
+        padding: 16px;
       }
     }
   </style>
@@ -387,9 +489,10 @@
       "name": "Ülviyyə Süleymanova",
       "alternateName": "Ulviyya Suleymanova",
       "jobTitle": "Terapevt və Osteopat",
-      "description": "Bakıda fəaliyyət göstərən terapevt və osteopat. 15+ il təcrübə ilə bel ağrısı, boyun ağrısı, disk yırtığı, miqren və skolioz müalicəsi aparır.",
+      "description": "Bakıda fəaliyyət göstərən terapevt və osteopat. 15+ il təcrübə ilə bel ağrısı, boyun ağrısı, disk yırtığı, miqren, skolioz və uşaqlarda osteopatiya sahəsində müalicə aparır.",
       "url": "https://www.osteopatbaku.az",
       "telephone": "+994557033812",
+      "image": "https://www.osteopatbaku.az/doctor.jpg",
       "worksFor": {
         "@type": "MedicalClinic",
         "name": "Medipark Klinikası",
@@ -406,7 +509,12 @@
         "Boyun ağrısı müalicəsi",
         "Disk yırtığı",
         "Miqren müalicəsi",
-        "Skolioz"
+        "Skolioz",
+        "Uşaqlarda osteopatiya",
+        "Artrozlar",
+        "Donmuş çiyin sindromu",
+        "Menisk yırtığı",
+        "Osteoporoz"
       ],
       "sameAs": [
         "https://www.instagram.com/osteopat_baku/"
@@ -416,7 +524,7 @@
       "@type": ["Physician", "LocalBusiness"],
       "@id": "https://www.osteopatbaku.az/#practice",
       "name": "Ülviyyə Süleymanova – Osteopat",
-      "description": "Bakıda osteopat və terapevt qəbulu. Bel ağrısı, boyun ağrısı, disk yırtığı, miqren, skolioz müalicəsi. 15+ il təcrübə.",
+      "description": "Bakıda osteopat və terapevt qəbulu. Bel ağrısı, boyun ağrısı, disk yırtığı, miqren, skolioz, uşaqlarda osteopatiya. 15+ il təcrübə.",
       "url": "https://www.osteopatbaku.az",
       "telephone": "+994557033812",
       "medicalSpecialty": "Osteopathic Medicine",
@@ -435,8 +543,8 @@
       "openingHoursSpecification": {
         "@type": "OpeningHoursSpecification",
         "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
-        "opens": "09:00",
-        "closes": "18:00"
+        "opens": "08:00",
+        "closes": "15:00"
       },
       "employee": {
         "@id": "https://www.osteopatbaku.az/#doctor"
@@ -459,10 +567,18 @@
         },
         {
           "@type": "Question",
+          "name": "Uşaqlar üçün osteopatiya müalicəsi varmı?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Bəli. Uşaqlarda yuxusuzluq, səbəbsiz ağlama, hiperaktivlik, nitqin ləngiməsi, əyriboyunluq, yastıayaqlıq, skolioz və digər problemlər üzrə osteopatik müalicə aparılır."
+          }
+        },
+        {
+          "@type": "Question",
           "name": "Hansı hallarda müraciət etmək olar?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Bel və boyun ağrıları, disk yırtığı, miqren, skolioz, postura problemləri və digər hərəkət sistemi şikayətləri zamanı müraciət etmək olar."
+            "text": "Bel və boyun ağrıları, disk yırtığı, miqren, skolioz, artrozlar, donmuş çiyin sindromu, menisk yırtığı, osteoporoz, postura problemləri və uşaqlarda müxtəlif inkişaf problemləri zamanı müraciət etmək olar."
           }
         },
         {
@@ -494,6 +610,7 @@
       <nav class="nav-links">
         <a href="#about">Haqqında</a>
         <a href="#problems">Müraciət səbəbləri</a>
+        <a href="#children">Uşaqlar</a>
         <a href="#services">Xidmətlər</a>
         <a href="#faq">Suallar</a>
         <a href="#contact">Əlaqə</a>
@@ -508,9 +625,9 @@
           <div class="hero-badge">Terapevt &amp; Osteopat • Bakı</div>
           <h1>Ülviyyə Süleymanova</h1>
           <p class="lead">
-            Bakıda fəaliyyət göstərən terapevt və osteopat. 
+            Bakıda fəaliyyət göstərən terapevt və osteopat.
             15+ il təcrübə ilə bel və boyun ağrıları, disk yırtığı, miqren,
-            skolioz və hərəkət sistemi ilə bağlı şikayətlər üzrə qəbul aparır.
+            skolioz, uşaqlarda osteopatiya və hərəkət sistemi ilə bağlı şikayətlər üzrə qəbul aparır.
           </p>
 
           <div class="chip-row">
@@ -520,6 +637,7 @@
             <span class="chip">Disk yırtığı</span>
             <span class="chip">Miqren</span>
             <span class="chip">Skolioz</span>
+            <span class="chip">Uşaqlarda osteopatiya</span>
           </div>
 
           <div class="cta-row">
@@ -528,30 +646,33 @@
           </div>
         </div>
 
+        <!-- DOCTOR PHOTO CARD -->
         <aside class="card hero-side">
-          <div class="stat">
-            <span class="stat-label">İxtisas</span>
-            <div class="stat-value">Terapevt və Osteopat</div>
-          </div>
-
-          <div class="stat">
-            <span class="stat-label">Təcrübə</span>
-            <div class="stat-value">15+ il</div>
-          </div>
-
-          <div class="stat">
-            <span class="stat-label">Ünvan</span>
-            <div class="stat-value">Səməd Vurğun 116, Medipark Klinikası</div>
-          </div>
-
-          <div class="stat">
-            <span class="stat-label">Əlaqə</span>
-            <div class="stat-value">+994 55 703 38 12</div>
-          </div>
-
-          <div class="stat">
-            <span class="stat-label">Instagram</span>
-            <div class="stat-value">@osteopat_baku</div>
+          <img
+            src="doctor.jpg"
+            alt="Ülviyyə Süleymanova – Terapevt və Osteopat, Bakı"
+            class="doctor-photo"
+            width="400"
+            height="533"
+            loading="eager"
+          />
+          <div class="hero-stats">
+            <div class="stat">
+              <span class="stat-label">İxtisas</span>
+              <div class="stat-value">Terapevt və Osteopat</div>
+            </div>
+            <div class="stat">
+              <span class="stat-label">Təcrübə</span>
+              <div class="stat-value">15+ il</div>
+            </div>
+            <div class="stat">
+              <span class="stat-label">Ünvan</span>
+              <div class="stat-value">Səməd Vurğun 116, Medipark Klinikası</div>
+            </div>
+            <div class="stat">
+              <span class="stat-label">Əlaqə</span>
+              <div class="stat-value">+994 55 703 38 12</div>
+            </div>
           </div>
         </aside>
       </div>
@@ -573,6 +694,7 @@
           <ul class="bullet-list">
             <li>Terapevt və osteopat kimi 15+ il təcrübə</li>
             <li>Bel, boyun və onurğa ilə bağlı funksional şikayətlər üzrə yanaşma</li>
+            <li>Uşaqlarda osteopatik müalicə üzrə ixtisaslaşma</li>
             <li>Fərdi qiymətləndirmə və pasiyentə uyğun yanaşma</li>
           </ul>
         </div>
@@ -581,52 +703,57 @@
 
     <section id="problems">
       <div class="container">
-        <h2 class="section-title">Hansı şikayətlərlə müraciət etmək olar?</h2>
+        <h2 class="section-title">Müalicə olunan xəstəliklər</h2>
         <p class="section-text">
           Aşağıdakı hallar osteopat və terapevt qəbuluna müraciət üçün ən çox rast gəlinən səbəblərdəndir.
         </p>
 
-        <div class="grid-3">
-          <div class="card info-card">
-            <h3>Bel və boyun ağrıları</h3>
-            <p>
-              Gündəlik hərəkəti çətinləşdirən bel, boyun və kürək nahiyəsində ağrı, gərginlik və hərəkət məhdudluğu.
-            </p>
-          </div>
+        <div class="diseases-grid">
+          <div class="disease-item">Boyun və bel ağrıları</div>
+          <div class="disease-item">Artrozlar</div>
+          <div class="disease-item">Gicgah-çənə oynağının disfunksiyası</div>
+          <div class="disease-item">Onurğanın degenerativ xəstəlikləri</div>
+          <div class="disease-item">Donmuş çiyin sindromu</div>
+          <div class="disease-item">Fəqərəarası disk yırtığı</div>
+          <div class="disease-item">Menisk yırtığı</div>
+          <div class="disease-item">Çanaq əyriliyi</div>
+          <div class="disease-item">Hamilələrdə bel ağrıları</div>
+          <div class="disease-item">Baş ağrıları (miqren)</div>
+          <div class="disease-item">Osteoporoz</div>
+          <div class="disease-item">Skolioz və kifoz</div>
+          <div class="disease-item">Postura problemləri</div>
+          <div class="disease-item">Hərəkət sistemi narahatlıqları</div>
+        </div>
+      </div>
+    </section>
 
-          <div class="card info-card">
-            <h3>Disk yırtığı</h3>
-            <p>
-              Fəqərəarası disk yırtığı ilə əlaqəli narahatlıqlar, hərəkət zamanı ağrı və onurğa ilə bağlı funksional problemlər.
-            </p>
+    <!-- CHILDREN OSTEOPATHY SECTION -->
+    <section id="children">
+      <div class="container">
+        <div class="card children-card">
+          <h2 class="section-title">Uşaqlarda Osteopatiya</h2>
+          <p class="section-text" style="margin-bottom: 8px;">
+            Osteopatik müalicə uşaqların inkişafında mühüm rol oynayır. Aşağıdakı problemlərin həllində effektiv nəticələr verir:
+          </p>
+          <div class="children-grid">
+            <div class="children-item">Yuxusuzluq</div>
+            <div class="children-item">Səbəbsiz ağlama</div>
+            <div class="children-item">Gec oturma</div>
+            <div class="children-item">Gec iməkləmə</div>
+            <div class="children-item">Hiperaktivlik</div>
+            <div class="children-item">Aqressivlik</div>
+            <div class="children-item">Yaddaş zəifliyi</div>
+            <div class="children-item">Nitqin ləngiməsi</div>
+            <div class="children-item">Kəllənin assimmetriyası</div>
+            <div class="children-item">Əyriboyunluq</div>
+            <div class="children-item">Əyripəncəlik</div>
+            <div class="children-item">Yastıayaqlıq</div>
+            <div class="children-item">Skolioz</div>
+            <div class="children-item">Kifoz</div>
+            <div class="children-item">Qamət pozğunluğu</div>
           </div>
-
-          <div class="card info-card">
-            <h3>Miqren və gərginlik</h3>
-            <p>
-              Boyun gərginliyi ilə yanaşı müşahidə olunan baş ağrıları və gündəlik həyat keyfiyyətinə təsir edən vəziyyətlər.
-            </p>
-          </div>
-
-          <div class="card info-card">
-            <h3>Skolioz</h3>
-            <p>
-              Duruş pozuntuları, onurğa əyrilikləri və bədənin biomekanik balansı ilə bağlı qiymətləndirmə ehtiyacı.
-            </p>
-          </div>
-
-          <div class="card info-card">
-            <h3>Postura problemləri</h3>
-            <p>
-              Oturaq həyat tərzi, iş rejimi və yanlış vərdişlər fonunda yaranan duruş və yük paylaşımı problemləri.
-            </p>
-          </div>
-
-          <div class="card info-card">
-            <h3>Hərəkət sistemi narahatlıqları</h3>
-            <p>
-              Əzələ-sümük sistemi, gərginlik, balans və hərəkət rahatlığı ilə bağlı müxtəlif funksional şikayətlər.
-            </p>
+          <div style="margin-top: 20px;">
+            <a class="btn btn-primary" href="https://wa.me/994557033812" target="_blank" rel="noopener noreferrer">Uşaq üçün qəbul yaz</a>
           </div>
         </div>
       </div>
@@ -671,15 +798,15 @@
             <h3>Niyə müraciət edirlər?</h3>
             <p>
               Pasiyentlər adətən bel və boyun ağrıları, onurğa ilə bağlı funksional narahatlıqlar,
-              miqren, duruş problemləri və gündəlik hərəkət rahatlığını azaldan vəziyyətlərlə müraciət edirlər.
+              miqren, duruş problemləri, uşaqlarda inkişaf gecikməsi və gündəlik hərəkət rahatlığını azaldan vəziyyətlərlə müraciət edirlər.
             </p>
           </div>
 
           <div class="card info-card">
             <h3>Niyə Ülviyyə Süleymanova?</h3>
             <p>
-              15+ il təcrübə, fərdi yanaşma, pasiyentin şikayətini sistemli dəyərləndirmə və
-              qəbul üçün rahat əlaqə imkanları.
+              15+ il təcrübə, fərdi yanaşma, həm böyüklər həm də uşaqlar üçün osteopatik müalicə,
+              pasiyentin şikayətini sistemli dəyərləndirmə və qəbul üçün rahat əlaqə imkanları.
             </p>
           </div>
         </div>
@@ -707,30 +834,32 @@
         <div class="faq">
           <details>
             <summary>Bakıda osteopat varmı?</summary>
-            <p>
-              Bəli. Ülviyyə Süleymanova Bakıda fəaliyyət göstərən terapevt və osteopatdır.
-            </p>
+            <p>Bəli. Ülviyyə Süleymanova Bakıda fəaliyyət göstərən terapevt və osteopatdır. Medipark Klinikasında qəbul aparır.</p>
+          </details>
+
+          <details>
+            <summary>Uşaqlar üçün osteopatiya müalicəsi varmı?</summary>
+            <p>Bəli. Yuxusuzluq, hiperaktivlik, nitqin ləngiməsi, əyriboyunluq, yastıayaqlıq, skolioz və digər inkişaf problemləri üzrə uşaq osteopatiyası aparılır.</p>
           </details>
 
           <details>
             <summary>Hansı hallarda müraciət etmək olar?</summary>
-            <p>
-              Bel və boyun ağrıları, disk yırtığı, miqren, skolioz, postura problemləri və digər hərəkət sistemi şikayətləri zamanı müraciət etmək olar.
-            </p>
+            <p>Bel və boyun ağrıları, disk yırtığı, miqren, skolioz, artrozlar, donmuş çiyin sindromu, menisk yırtığı, osteoporoz, postura problemləri və uşaqlarda müxtəlif inkişaf problemləri zamanı müraciət etmək olar.</p>
+          </details>
+
+          <details>
+            <summary>Hamilələr üçün qəbul varmı?</summary>
+            <p>Bəli. Hamilələrdə bel ağrıları və digər narahatlıqlar üzrə osteopatik müalicə aparılır.</p>
           </details>
 
           <details>
             <summary>Qəbul üçün necə yazmaq olar?</summary>
-            <p>
-              WhatsApp nömrəsi və telefon nömrəsi eynidir: <a href="https://wa.me/994557033812" target="_blank" rel="noopener noreferrer">+994 55 703 38 12</a>
-            </p>
+            <p>WhatsApp nömrəsi və telefon nömrəsi eynidir: <a href="https://wa.me/994557033812" target="_blank" rel="noopener noreferrer">+994 55 703 38 12</a></p>
           </details>
 
           <details>
             <summary>Klinikanın ünvanı haradadır?</summary>
-            <p>
-              Səməd Vurğun 116, Medipark Klinikası, Bakı.
-            </p>
+            <p>Səməd Vurğun 116, Medipark Klinikası, Bakı.</p>
           </details>
         </div>
       </div>
