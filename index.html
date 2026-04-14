@@ -378,30 +378,112 @@
     }
   </style>
 
- <script type="application/ld+json">
+<script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": ["Physician", "LocalBusiness"],
-  "name": "Ülviyyə Süleymanova",
-  "description": "Bakıda fəaliyyət göstərən terapevt və osteopat. Bel ağrıları, disk yırtığı, miqren, skolioz müalicəsi.",
-  "medicalSpecialty": "Osteopathic Medicine",
-  "url": "https://www.osteopatbaku.az",
-  "telephone": "+994557033812",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Səməd Vurğun 116",
-    "addressLocality": "Bakı",
-    "addressCountry": "AZ"
-  },
-  "geo": {
-    "@type": "GeoCoordinates",
-    "latitude": 40.3960301,
-    "longitude": 49.8339227
-  },
-  "openingHours": "Mo-Sa 09:00-18:00",
-  "sameAs": [
-    "https://www.instagram.com/osteopat_baku/",
-    "https://wa.me/994557033812"
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://www.osteopatbaku.az/#doctor",
+      "name": "Ülviyyə Süleymanova",
+      "alternateName": "Ulviyya Suleymanova",
+      "jobTitle": "Terapevt və Osteopat",
+      "description": "Bakıda fəaliyyət göstərən terapevt və osteopat. 15+ il təcrübə ilə bel ağrısı, boyun ağrısı, disk yırtığı, miqren və skolioz müalicəsi aparır.",
+      "url": "https://www.osteopatbaku.az",
+      "telephone": "+994557033812",
+      "worksFor": {
+        "@type": "MedicalClinic",
+        "name": "Medipark Klinikası",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Səməd Vurğun 116",
+          "addressLocality": "Bakı",
+          "addressCountry": "AZ"
+        }
+      },
+      "knowsAbout": [
+        "Osteopatiya",
+        "Bel ağrısı müalicəsi",
+        "Boyun ağrısı müalicəsi",
+        "Disk yırtığı",
+        "Miqren müalicəsi",
+        "Skolioz"
+      ],
+      "sameAs": [
+        "https://www.instagram.com/osteopat_baku/"
+      ]
+    },
+    {
+      "@type": ["Physician", "LocalBusiness"],
+      "@id": "https://www.osteopatbaku.az/#practice",
+      "name": "Ülviyyə Süleymanova – Osteopat",
+      "description": "Bakıda osteopat və terapevt qəbulu. Bel ağrısı, boyun ağrısı, disk yırtığı, miqren, skolioz müalicəsi. 15+ il təcrübə.",
+      "url": "https://www.osteopatbaku.az",
+      "telephone": "+994557033812",
+      "medicalSpecialty": "Osteopathic Medicine",
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Səməd Vurğun 116",
+        "addressLocality": "Bakı",
+        "addressCountry": "AZ"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 40.3960301,
+        "longitude": 49.8339227
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+        "opens": "09:00",
+        "closes": "18:00"
+      },
+      "member": {
+        "@id": "https://www.osteopatbaku.az/#doctor"
+      },
+      "sameAs": [
+        "https://www.instagram.com/osteopat_baku/",
+        "https://wa.me/994557033812"
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Bakıda osteopat varmı?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Bəli. Ülviyyə Süleymanova Bakıda fəaliyyət göstərən terapevt və osteopatdır. Medipark Klinikasında qəbul aparır."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Hansı hallarda müraciət etmək olar?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Bel və boyun ağrıları, disk yırtığı, miqren, skolioz, postura problemləri və digər hərəkət sistemi şikayətləri zamanı müraciət etmək olar."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Klinikanın ünvanı haradadır?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Səməd Vurğun 116, Medipark Klinikası, Bakı."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Qəbul üçün necə yazmaq olar?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "WhatsApp və telefon nömrəsi: +994 55 703 38 12"
+          }
+        }
+      ]
+    }
   ]
 }
 </script>
