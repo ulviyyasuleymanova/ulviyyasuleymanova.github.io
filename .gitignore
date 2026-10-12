@@ -1,2 +1,8 @@
 .github_token
 shared image*.jpeg
+.youtube_client.json
+.youtube_token.json
+client_secret_*.json
+scripts/youtube/.venv/
+scripts/youtube/export.json
+scripts/youtube/transcripts/
